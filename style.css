@@ -1,0 +1,145 @@
+:root {
+    --bg: #ffffff;
+    --text: #000000;
+    --accent: #2563eb;
+    --muted: #f4f4f5;
+    --border: #e4e4e7;
+}
+
+.dark-mode {
+    --bg: #000000;
+    --text: #ffffff;
+    --accent: #3b82f6;
+    --muted: #111111;
+    --border: #27272a;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Plus Jakarta Sans', sans-serif; }
+body { background: var(--bg); color: var(--text); transition: background 0.4s ease; line-height: 1.6; }
+
+.container { max-width: 1000px; margin: 0 auto; padding: 120px 24px; }
+
+/* Nav */
+nav { display: flex; justify-content: space-between; align-items: center; padding: 25px 5%; position: fixed; width: 100%; top: 0; background: var(--bg); border-bottom: 1px solid var(--border); z-index: 1000; }
+.logo { font-weight: 800; font-size: 1.2rem; letter-spacing: -1px; }
+.logo span { color: var(--accent); }
+.text-toggle { background: none; border: 1px solid var(--border); color: var(--text); padding: 6px 12px; font-size: 0.7rem; font-weight: 700; cursor: pointer; border-radius: 4px; }
+.nav-btn { background: var(--text); color: var(--bg); padding: 8px 18px; text-decoration: none; font-weight: 700; font-size: 0.8rem; border-radius: 4px; }
+
+/* Hero */
+.hero { padding-bottom: 80px; }
+.status-pill { font-size: 0.7rem; font-weight: 700; border: 1px solid var(--accent); color: var(--accent); padding: 4px 12px; border-radius: 20px; text-transform: uppercase; }
+h1 { font-size: 4rem; letter-spacing: -3px; margin: 20px 0; line-height: 1; }
+.subtitle { font-size: 1.5rem; color: var(--accent); font-weight: 500; margin-bottom: 20px; }
+.bio { font-size: 1.1rem; max-width: 600px; color: var(--text); opacity: 0.8; }
+
+.hero-actions { display: flex; gap: 15px; margin-top: 40px; }
+.btn-primary { background: var(--accent); color: white; padding: 14px 28px; text-decoration: none; border-radius: 8px; font-weight: 600; transition: 0.3s; }
+.btn-secondary { border: 1px solid var(--border); color: var(--text); padding: 14px 28px; text-decoration: none; border-radius: 8px; font-weight: 600; }
+
+/* Skills Grid */
+.label { font-size: 0.8rem; text-transform: uppercase; letter-spacing: 2px; color: var(--accent); margin-bottom: 30px; }
+.skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; }
+.skill-category { background: var(--muted); padding: 30px; border-radius: 12px; border: 1px solid var(--border); }
+.skill-category h3 { font-size: 1rem; margin-bottom: 10px; }
+.skill-category p { font-size: 0.9rem; opacity: 0.7; }
+
+/* Project Card */
+.focus-card { background: var(--muted); padding: 50px; border-radius: 20px; border: 1px solid var(--border); display: flex; justify-content: space-between; align-items: flex-start; }
+.card-text h3 { font-size: 2rem; margin-bottom: 15px; }
+.card-text p { max-width: 500px; margin-bottom: 20px; }
+.card-tag { font-size: 0.7rem; font-weight: 900; background: var(--text); color: var(--bg); padding: 5px 15px; border-radius: 4px; }
+.project-link { color: var(--accent); text-decoration: none; font-weight: 700; }
+
+/* Contact Strip */
+.contact-strip { display: flex; flex-wrap: wrap; gap: 40px; margin-top: 100px; padding: 40px; background: var(--muted); border-radius: 12px; }
+.contact-box .label { display: block; margin-bottom: 5px; }
+.contact-box a, .contact-box p { font-size: 1.2rem; font-weight: 600; color: var(--text); text-decoration: none; }
+
+footer { text-align: center; padding: 60px 0; opacity: 0.5; font-size: 0.9rem; }
+
+@media (max-width: 768px) {
+    h1 { font-size: 2.5rem; }
+    .focus-card { flex-direction: column; gap: 20px; padding: 30px; }
+}
+/* Certification Grid */
+.cert-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.cert-card {
+    background: var(--muted);
+    padding: 25px;
+    border-radius: 12px;
+    border: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    transition: 0.3s;
+}
+
+.cert-card:hover {
+    border-color: var(--accent);
+    transform: translateY(-5px);
+}
+
+.cert-icon {
+    font-size: 2rem;
+}
+
+.cert-info h3 {
+    font-size: 0.95rem;
+    margin-bottom: 5px;
+}
+
+.cert-info p {
+    font-size: 0.8rem;
+    opacity: 0.7;
+    margin-bottom: 10px;
+}
+
+.view-link {
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: var(--accent);
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+/* Updated Button Styles */
+.btn-primary {
+    background: var(--accent);
+    color: white;
+    padding: 14px 28px;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+    transition: 0.3s;
+    display: inline-block;
+}
+
+.btn-primary:hover {
+    filter: brightness(1.2);
+    box-shadow: 0 10px 20px rgba(59, 130, 246, 0.3);
+}
+.nav-btn {
+    background: var(--text);
+    color: var(--bg);
+    padding: 8px 18px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 0.8rem;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.nav-btn:hover {
+    background: #25D366; /* WhatsApp Green */
+    color: white;
+    border-color: #25D366;
+    transform: scale(1.05);
+}
